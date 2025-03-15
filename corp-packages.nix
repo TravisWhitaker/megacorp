@@ -24,4 +24,17 @@ in
         supportedPlatform = _ : true;
         planOverride = _ : {};
     };
+
+    vector-fftw =
+    {
+        name = "vector-fftw";
+        src = builtins.fetchGit
+        {
+            url = "https://github.com/bgamari/vector-fftw";
+            ref = "master";
+            rev = "61ff19daae86ffdad06a886769cf61ee99d25937";
+        };
+        supportedPlatform = _ : true;
+        planOverride = _ : {};
+    };
 }
