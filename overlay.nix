@@ -238,6 +238,11 @@ in rec {
             packages.halide-haskell.components.library.libs = self.pkgs.lib.mkForce
                 [ self.pkgs.megacorp.halide
                 ];
+
+            packages.vulkan.components.tests.test.libs = self.pkgs.lib.mkForce
+                [ self.pkgs.vulkan-headers
+                  self.pkgs.vulkan-loader
+                ];
         };
         megacorpPlanOverrideMod =
             self.pkgs.lib.foldl
