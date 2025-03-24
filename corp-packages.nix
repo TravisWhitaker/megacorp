@@ -37,4 +37,19 @@ in
         supportedPlatform = _ : true;
         planOverride = _ : {};
     };
+
+    vulkan-examples =
+    {
+        name = "vulkan-examples";
+        src = "${(builtins.fetchGit
+        {
+            url = "https://github.com/expipiplus1/vulkan";
+            ref = "master";
+            rev = "b59f1b3c1e00e1b49b76c844df5c662b4b8ed2d2";
+        })}/examples";
+        supportedPlatform = _ : true;
+        planOverride = pkgs:
+        {
+        };
+    };
 }
