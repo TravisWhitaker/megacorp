@@ -25,6 +25,19 @@ in
         planOverride = _ : {};
     };
 
+    haskell-build-acid =
+    {
+        name = "haskell-build-acid";
+        src = builtins.fetchGit
+        {
+            url = "https://github.com/TravisWhitaker/haskell-build-acid";
+            ref = "master";
+            rev = "d6bf9e56daf7df46673126f244035db947d8696d";
+        };
+        supportedPlatform = _ : true;
+        planOverride = _ : {};
+    };
+
     vector-fftw =
     {
         name = "vector-fftw";
