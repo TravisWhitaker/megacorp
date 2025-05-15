@@ -7,9 +7,9 @@ let nixpkgs-src = builtins.fetchGit
     };
     haskellnix-src = builtins.fetchGit
     {
-      url = "https://github.com/TravisWhitaker/haskell.nix";
-      ref = "bootstrap-966";
-      rev = "6976ec1bc9a9f3055e16372103a99b1a4cad88d4";
+      url = "https://github.com/input-output-hk/haskell.nix";
+      ref = "master";
+      rev = "d39a9850ab7c9ebe0f3ec6a50548cfc310978aae";
     };
     haskellnix = import haskellnix-src {};
 in import nixpkgs-src
