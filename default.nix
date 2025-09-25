@@ -3,13 +3,13 @@ let nixpkgs-src = builtins.fetchGit
     {
       url = "https://github.com/nixos/nixpkgs";
       ref = "master";
-      rev ="b16f158e1b15509ef7ad19032f1b80646f514151";
+      rev ="a683adc19ff5228af548c6539dbc3440509bfed3";
     };
     haskellnix-src = builtins.fetchGit
     {
       url = "https://github.com/input-output-hk/haskell.nix";
       ref = "master";
-      rev = "d39a9850ab7c9ebe0f3ec6a50548cfc310978aae";
+      rev = "8792aa154ae770f9100d158571a1a1f0cace0ed1";
     };
     haskellnix = import haskellnix-src {};
 in import nixpkgs-src

@@ -115,6 +115,10 @@ in rec {
             # to do with the Cabal planner and if we don't set it globally here
             # nothing works. wtf.
             planned = true;
+            packages.directory.components.library.configureFlags =
+                self.pkgs.lib.mkForce (["-fos-string"] ++ extraCfg);
+            packages.unix.components.library.configureFlags =
+                self.pkgs.lib.mkForce (["-fos-string"] ++ extraCfg);
             packages.X11.components.library.libs = self.pkgs.lib.mkForce
                 [ self.pkgs.xorg.libX11
                   self.pkgs.xorg.libXScrnSaver
