@@ -110,7 +110,7 @@ in rec {
             # this in Haskell.nix upstream somehow.
         in
         {
-            evalPackages = self.buildPackages;
+            evalPackages = self.pkgsBuildBuild;
             # Upstream added this nutty flag recently; it implements something
             # to do with the Cabal planner and if we don't set it globally here
             # nothing works. wtf.

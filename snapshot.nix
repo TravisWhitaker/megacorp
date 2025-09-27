@@ -1,5 +1,5 @@
 {
-  resolver = "lts-24.10";
+  resolver = "nightly-2025-09-25";
   extras = hackage:
   {
     packages =
