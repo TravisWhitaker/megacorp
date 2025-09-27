@@ -115,6 +115,8 @@ in rec {
             # to do with the Cabal planner and if we don't set it globally here
             # nothing works. wtf.
             planned = true;
+            packages.file-io.components.library.configureFlags =
+                self.pkgs.lib.mkForce (["-fos-string"] ++ extraCfg);
             packages.directory.components.library.configureFlags =
                 self.pkgs.lib.mkForce (["-fos-string"] ++ extraCfg);
             packages.unix.components.library.configureFlags =
