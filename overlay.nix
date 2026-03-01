@@ -24,8 +24,8 @@ in rec {
     haskell-nix = super.haskell-nix // {
         overlays = super.overlays ++ [ thisOverlay ];
         compiler = super.haskell-nix.compiler // {
-            ghc984 = self.haskell-nix.haskellLib.makeCompilerDeps
-            (super.haskell-nix.compiler.ghc984.override
+            ghc9103 = self.haskell-nix.haskellLib.makeCompilerDeps
+            (super.haskell-nix.compiler.ghc9103.override
             {
                 # Always generate position independent code:
                 enableRelocatedStaticLibs = true;
@@ -33,9 +33,9 @@ in rec {
             # Not sure why we have to do this, but we do. See
             # https://github.com/input-output-hk/haskell.nix/issues/1895
             {
-                dummy-ghc-data = super.haskell-nix.compiler.ghc984.dummy-ghc-data;
-                defaultSetup = super.haskell-nix.compiler.ghc984.defaultSetup;
-                defaultSetupFor = super.haskell-nix.compiler.ghc984.defaultSetupFor;
+                dummy-ghc-data = super.haskell-nix.compiler.ghc9103.dummy-ghc-data;
+                defaultSetup = super.haskell-nix.compiler.ghc9103.defaultSetup;
+                defaultSetupFor = super.haskell-nix.compiler.ghc9103.defaultSetupFor;
             };
         };
         buildHaskellLib = super.buildPackages.haskell-nix.haskellLib;
@@ -389,8 +389,8 @@ in rec {
                 (n: _: self.haskell-nix.megacorpShell n)
                 self.haskell-nix.allMegacorpPkgs;
         evalRoots =
-          (self.haskell-nix.roots "ghc984")
-          // (self.haskell-nix.megacorpPkgSet.config.evalPackages.haskell-nix.roots "ghc984");
+          (self.haskell-nix.roots "ghc9103")
+          // (self.haskell-nix.megacorpPkgSet.config.evalPackages.haskell-nix.roots "ghc9103");
         setupMegacorpProject =
             { project
             , sourceRepos

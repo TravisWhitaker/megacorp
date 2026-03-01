@@ -2,14 +2,14 @@ extraNixpkgsAttrs:
 let nixpkgs-src = builtins.fetchGit
     {
       url = "https://github.com/nixos/nixpkgs";
-      ref = "master";
-      rev ="a683adc19ff5228af548c6539dbc3440509bfed3";
+      ref = "nixos-25.11";
+      rev ="1267bb4920d0fc06ea916734c11b0bf004bbe17e";
     };
     haskellnix-src = builtins.fetchGit
     {
       url = "https://github.com/input-output-hk/haskell.nix";
       ref = "master";
-      rev = "46abef90b4101ff9253a574cf6fbdc74b78a5863";
+      rev = "0f4ef613dd6c1c19fe4b391f2ec8dcb487a1dff7";
     };
     haskellnix = import haskellnix-src {};
 in import nixpkgs-src

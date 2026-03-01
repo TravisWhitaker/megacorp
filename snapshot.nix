@@ -1,10 +1,10 @@
 {
-  resolver = "nightly-2025-09-25";
+  resolver = "lts-24.32";
   extras = hackage:
   {
     packages =
     {
-      "vulkan" = hackage."vulkan"."3.26.2".revisions.default;
+      # "vulkan" = hackage."vulkan"."3.26.2".revisions.default;
     };
   };
 }
