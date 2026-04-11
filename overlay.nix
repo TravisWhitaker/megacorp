@@ -121,6 +121,8 @@ in rec {
                 self.pkgs.lib.mkForce (["-fos-string"] ++ extraCfg);
             packages.directory.components.library.configureFlags =
                 self.pkgs.lib.mkForce (["-fos-string"] ++ extraCfg);
+            packages.process.components.library.configureFlags =
+                self.pkgs.lib.mkForce (["-fos-string"] ++ extraCfg);
             packages.unix.components.library.configureFlags =
                 self.pkgs.lib.mkForce (["-fos-string"] ++ extraCfg);
             packages.X11.components.library.libs = self.pkgs.lib.mkForce

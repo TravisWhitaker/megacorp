@@ -1,5 +1,5 @@
 {
-  resolver = "lts-24.32";
+  resolver = "lts-24.36";
   extras = hackage:
   {
     packages =
