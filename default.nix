@@ -9,7 +9,7 @@ let nixpkgs-src = builtins.fetchGit
     {
       url = "https://github.com/input-output-hk/haskell.nix";
       ref = "master";
-      rev = "ed95c6b9232b100eb1da9dc1cf448952045aaedd";
+      rev = "d2cffda795ee9dc29fa6c1f0904049bf5f10741a";
     };
     haskellnix = import haskellnix-src {};
 in import nixpkgs-src
